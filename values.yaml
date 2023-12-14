@@ -62,3 +62,17 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# The keys within the "env" map are mounted as environment variables in the paperless-ngx container.
+env:
+  - name: PAPERLESS_REDIS
+    value: "redis://redis:6379"
+  - name: PAPERLESS_OCR_LANGUAGES
+    value: deu eng
+  - name: PAPERLESS_TIME_ZONE
+    value: Europe/Vienna
+
+# To supply secrets to the paperless-ngx container, create a secret in the same namespace as the chart.
+# This could be useful to set the PAPERLESS_ADMIN_PASSWORD and PAPERLESS_ADMIN_USER.
+extraSecretNamesForEnvFrom:
+  - paperless-ngx-secret

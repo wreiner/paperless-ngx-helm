@@ -46,7 +46,7 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           envFrom:
             - configMapRef:
-                name: {{ include "paperless-ngx.fullname" . }}
+                name: {{ include "paperless-ngx.fullname" . }}-configmap
           {{- range .Values.extraSecretNamesForEnvFrom }}
             - secretRef:
                 name: {{ . }}
@@ -64,10 +64,6 @@ spec:
             - mountPath: /usr/src/paperless/consume
               name: paperless-ngx-pv
               subPath: consume
-        - name: redis
-          image: redis:7
-          ports:
-            - containerPort: 6379
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

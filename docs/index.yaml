@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  paperless-ngx:
+  - apiVersion: v2
+    appVersion: 2.1.2
+    created: "2023-12-16T20:20:19.71524228+01:00"
+    dependencies:
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.5.0
+    description: A Helm chart to install paperless-ngx
+    digest: 5f951efe5f656efdb7a4a2a290733add988cb61b140902bb11d204aef2e6fdac
+    name: paperless-ngx
+    type: application
+    urls:
+    - https://pages.github.io/wreiner/paperless-ngx-helm/paperless-ngx-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-12-16T20:20:19.710312289+01:00"

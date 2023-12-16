@@ -8,5 +8,20 @@
     <p>A helm chart to install <a href="https://github.com/paperless-ngx/paperless-ngx">paperless-ngx</a>.</p>
     <br>
     <p>The source of the Helm chart can be found <a href="https://github.com/wreiner/paperless-ngx-helm">here</a>.</p>
+    <br>
+    <h2>Using the Helm Chart</h2>
+    <p>To use the paperless-ngx-helm chart, follow these steps:</p>
+    <ol>
+        <li>Add the helm chart repository:</li>
+        <pre><code>helm repo add paperless-ngx-helm https://wreiner.github.io/paperless-ngx-helm</code></pre>
+        <li>Update the repo index:</li>
+        <pre><code>helm repo update</code></pre>
+        <li>Install the chart:</li>
+        <pre><code>helm install my-paperless-ngx [-f values.yaml] [-n paperless-ns --create-namespace]</code></pre>
+        <li>Show all the versions available:</li>
+        <pre><code>helm search repo paperless-ngx-helm/paperless-ngx --versions</code></pre>
+        <li>Get the default values.yaml:</li>
+        <pre><code>helm show values paperless-ngx-helm/paperless-ngx > paperless-ngx-values.yaml</code></pre>
+    </ol>
 </body>
 </html>

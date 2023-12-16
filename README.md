@@ -2,6 +2,10 @@
 
 A helm chart to install [paperless-ngx](https://github.com/paperless-ngx/paperless-ngx).
 
+## How to use
+
+The documentation on how to use this Helm chart can be found [here](https://wreiner.github.io/paperless-ngx-helm/).
+
 ## Configuration
 
 Configuration is done through values.yaml.

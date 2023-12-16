@@ -86,3 +86,5 @@ pvc:
 
 redis:
   architecture: standalone
+  auth:
+    enabled: false

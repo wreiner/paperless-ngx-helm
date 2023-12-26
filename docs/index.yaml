@@ -13,6 +13,6 @@ entries:
     name: paperless-ngx
     type: application
     urls:
-    - https://pages.github.io/wreiner/paperless-ngx-helm/paperless-ngx-0.1.0.tgz
+    - https://wreiner.github.io/paperless-ngx-helm/paperless-ngx-0.1.0.tgz
     version: 0.1.0
 generated: "2023-12-16T20:20:19.710312289+01:00"

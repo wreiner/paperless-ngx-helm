@@ -71,6 +71,10 @@ env:
     value: deu eng
   - name: PAPERLESS_TIME_ZONE
     value: Europe/Vienna
+  - name: PAPERLESS_URL
+    value: https://paperless.example.com
+  - name: PAPERLESS_OCR_USER_ARGS
+    value: '{"invalidate_digital_signatures": true}'
 
 # To supply secrets to the paperless-ngx container, create a secret in the same namespace as the chart.
 # This could be useful to set the PAPERLESS_ADMIN_PASSWORD and PAPERLESS_ADMIN_USER.

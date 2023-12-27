@@ -14,4 +14,8 @@ cat docs/index.yaml
 
 helm repo update
 helm search repo pngxh/paperless-ngx --versions | head 3
+
+git add docs/*
+gic -m "Create new helm chart release" docs/
+git push
 ```

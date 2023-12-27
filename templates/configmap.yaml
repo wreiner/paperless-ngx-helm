@@ -4,5 +4,5 @@ metadata:
   name: {{ .Release.Name }}-configmap
 data:
 {{- range $env := .Values.env }}
-  {{ $env.name }}: {{ $env.value }}
+  {{ $env.name }}: '{{ $env.value }}'
 {{- end }}

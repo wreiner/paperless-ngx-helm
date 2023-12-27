@@ -13,3 +13,6 @@ spec:
   {{- if .Values.pvc.storageClassName }}
   storageClassName: {{ .Values.pvc.storageClassName }}
   {{- end }}
+  {{- if .Values.pvc.volumeName }}
+  volumeName: {{ .Values.pvc.volumeName }}
+  {{- end }}

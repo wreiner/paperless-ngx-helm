@@ -4,11 +4,11 @@ description: A Helm chart to install paperless-ngx
 
 type: application
 
-version: 0.4.0
+version: 0.5.0
 
-appVersion: "2.4.1"
+appVersion: "2.7.2"
 
 dependencies:
   - name: redis
-    version: "18.8.2"
+    version: "19.1.0"
     repository: "https://charts.bitnami.com/bitnami"

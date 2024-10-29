@@ -3,6 +3,10 @@
 # remove charts
 rm -rf paperless-ngx/charts
 
+cd paperless-ngx
+helm dependency update
+cd ..
+
 # move tarballs out of docs directory
 mv paperless-ngx/docs/*.tgz tmp/
 

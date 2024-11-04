@@ -4,9 +4,9 @@ description: A Helm chart to install paperless-ngx
 
 type: application
 
-version: 0.6.1
+version: 0.6.2
 
-appVersion: "2.13.2"
+appVersion: "2.13.4"
 
 dependencies:
   - name: redis

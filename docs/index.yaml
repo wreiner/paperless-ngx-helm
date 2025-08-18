@@ -2,8 +2,22 @@ apiVersion: v1
 entries:
   paperless-ngx:
   - apiVersion: v2
+    appVersion: 2.18.1
+    created: "2025-08-18T12:07:23.266631888+02:00"
+    dependencies:
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 22.0.3
+    description: A Helm chart to install paperless-ngx
+    digest: 6bd388290388cf222e4b83071102505020eab44623cc29c959d0a797a9914f0f
+    name: paperless-ngx
+    type: application
+    urls:
+    - https://wreiner.github.io/paperless-ngx-helm/paperless-ngx-0.7.1.tgz
+    version: 0.7.1
+  - apiVersion: v2
     appVersion: 2.13.4
-    created: "2024-11-04T07:48:46.171914415+01:00"
+    created: "2025-08-18T12:07:23.263044902+02:00"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -17,7 +31,7 @@ entries:
     version: 0.6.2
   - apiVersion: v2
     appVersion: 2.13.2
-    created: "2024-11-04T07:48:46.166381187+01:00"
+    created: "2025-08-18T12:07:23.259595456+02:00"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -31,7 +45,7 @@ entries:
     version: 0.6.1
   - apiVersion: v2
     appVersion: 2.13.1
-    created: "2024-11-04T07:48:46.161316799+01:00"
+    created: "2025-08-18T12:07:23.255952755+02:00"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -45,7 +59,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 2.7.2
-    created: "2024-11-04T07:48:46.155055902+01:00"
+    created: "2025-08-18T12:07:23.25319334+02:00"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -59,7 +73,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 2.4.1
-    created: "2024-11-04T07:48:46.150451543+01:00"
+    created: "2025-08-18T12:07:23.250445888+02:00"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -73,7 +87,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 2.3.2
-    created: "2024-11-04T07:48:46.139484205+01:00"
+    created: "2025-08-18T12:07:23.244428729+02:00"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -87,7 +101,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 2.2.1
-    created: "2024-11-04T07:48:46.131400859+01:00"
+    created: "2025-08-18T12:07:23.240291074+02:00"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -101,7 +115,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 2.1.3
-    created: "2024-11-04T07:48:46.12445812+01:00"
+    created: "2025-08-18T12:07:23.236928943+02:00"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -115,7 +129,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 2.1.2
-    created: "2024-11-04T07:48:46.118859891+01:00"
+    created: "2025-08-18T12:07:23.234036467+02:00"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -127,4 +141,4 @@ entries:
     urls:
     - https://wreiner.github.io/paperless-ngx-helm/paperless-ngx-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-04T07:48:46.112634291+01:00"
+generated: "2025-08-18T12:07:23.231559104+02:00"

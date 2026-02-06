@@ -1,0 +1,63 @@
+---
+# How to create GitHub Personal Access Token
+# - Go to GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
+# - Generate new token with `repo` scope
+name: Release Helm Chart
+
+on:
+  workflow_dispatch:
+    inputs:
+      chart_version:
+        description: 'Chart version (e.g., 1.2.3)'
+        required: true
+        type: string
+      app_version:
+        description: 'Paperless-ngx app version (e.g., 2.5.4)'
+        required: true
+        type: string
+      redis_version:
+        description: 'Redis chart version (optional, leave empty to keep current)'
+        required: false
+        type: string
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout from Forgejo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Helm
+        uses: https://github.com/azure/setup-helm@v4
+        with:
+          version: 'latest'
+
+      - name: Install yq
+        run: |
+          sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq
+          sudo chmod +x /usr/local/bin/yq
+
+      - name: Run release script
+        run: |
+          chmod +x scripts/build-release.sh
+          ./scripts/build-release.sh \
+            "${{ inputs.chart_version }}" \
+            "${{ inputs.app_version }}" \
+            "${{ inputs.redis_version }}"
+
+      - name: Commit and push changes to Forgejo
+        run: |
+          git config user.name "forgejo-actions"
+          git config user.email "actions@forgejo.local"
+          git add docs/* paperless-ngx/Chart.yaml paperless-ngx/Chart.lock
+          git commit -m "Release chart version ${{ inputs.chart_version }} (app ${{ inputs.app_version }})"
+          git push origin main
+
+      - name: Push to GitHub mirror
+        env:
+          REPO_TOKEN_GITHUB: ${{ secrets.REPO_TOKEN_GITHUB }}
+        run: |
+          git remote add github https://x-access-token:${REPO_TOKEN_GITHUB}@github.com/wreiner/paperless-ngx-helm.git || true
+          git push github main --force

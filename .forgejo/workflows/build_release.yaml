@@ -22,22 +22,15 @@ on:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: docker
+    container:
+      image: gitint01.wreiner.at/wreiner/ansible-runner:20260202
+
     steps:
       - name: Checkout from Forgejo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup Helm
-        uses: https://github.com/azure/setup-helm@v4
-        with:
-          version: 'latest'
-
-      - name: Install yq
-        run: |
-          sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq
-          sudo chmod +x /usr/local/bin/yq
 
       - name: Run release script
         run: |

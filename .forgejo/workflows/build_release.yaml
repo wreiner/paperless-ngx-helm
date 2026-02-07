@@ -24,7 +24,7 @@ jobs:
   release:
     runs-on: docker
     container:
-      image: gitint01.wreiner.at/wreiner/ansible-runner:20260202
+      image: ${{ vars.CONFIG_DEFAULT_ANSIBLE_RUNNER_IMAGE }}
 
     steps:
       - name: Checkout from Forgejo
@@ -42,8 +42,8 @@ jobs:
 
       - name: Commit and push changes to Forgejo
         run: |
-          git config user.name "forgejo-actions"
-          git config user.email "actions@forgejo.local"
+          git config user.name "${{ vars.CONFIG_FORGEJO_GIT_USERNAME }}"
+          git config user.email "${{ vars.CONFIG_FORGEJO_GIT_EMAIL }}"
           git add docs/* paperless-ngx/Chart.yaml paperless-ngx/Chart.lock
           git commit -m "Release chart version ${{ inputs.chart_version }} (app ${{ inputs.app_version }})"
           git push origin main

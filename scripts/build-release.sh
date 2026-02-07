@@ -61,5 +61,3 @@ echo ""
 echo "==> New release built successfully!"
 echo "    Package: ${DOCS_DIR}/paperless-ngx-${CHART_VERSION}.tgz"
 echo ""
-echo "Changed files:"
-git status --short

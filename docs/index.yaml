@@ -2,8 +2,22 @@ apiVersion: v1
 entries:
   paperless-ngx:
   - apiVersion: v2
+    appVersion: 2.20.11
+    created: "2026-03-16T06:14:36.413397345Z"
+    dependencies:
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 25.3.2
+    description: A Helm chart to install paperless-ngx
+    digest: fa48d63601e96c3106b63f989079fc543c3e42eaab79c09a15806494754640d2
+    name: paperless-ngx
+    type: application
+    urls:
+    - https://wreiner.github.io/paperless-ngx-helm/paperless-ngx-0.8.3.tgz
+    version: 0.8.3
+  - apiVersion: v2
     appVersion: 2.20.10
-    created: "2026-03-06T15:59:46.634424861Z"
+    created: "2026-03-16T06:14:36.409662495Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -17,7 +31,7 @@ entries:
     version: 0.8.2
   - apiVersion: v2
     appVersion: 2.20.8
-    created: "2026-03-06T15:59:46.630918215Z"
+    created: "2026-03-16T06:14:36.406214755Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -31,7 +45,7 @@ entries:
     version: 0.8.1
   - apiVersion: v2
     appVersion: 2.20.6
-    created: "2026-03-06T15:59:46.62731628Z"
+    created: "2026-03-16T06:14:36.40266869Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -45,7 +59,7 @@ entries:
     version: 0.8.0
   - apiVersion: v2
     appVersion: 2.18.1
-    created: "2026-03-06T15:59:46.623646977Z"
+    created: "2026-03-16T06:14:36.399460171Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -59,7 +73,7 @@ entries:
     version: 0.7.1
   - apiVersion: v2
     appVersion: 2.13.4
-    created: "2026-03-06T15:59:46.620101579Z"
+    created: "2026-03-16T06:14:36.396213549Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -73,7 +87,7 @@ entries:
     version: 0.6.2
   - apiVersion: v2
     appVersion: 2.13.2
-    created: "2026-03-06T15:59:46.616617646Z"
+    created: "2026-03-16T06:14:36.392977358Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -87,7 +101,7 @@ entries:
     version: 0.6.1
   - apiVersion: v2
     appVersion: 2.13.1
-    created: "2026-03-06T15:59:46.613022233Z"
+    created: "2026-03-16T06:14:36.389723513Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -101,7 +115,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 2.7.2
-    created: "2026-03-06T15:59:46.609948133Z"
+    created: "2026-03-16T06:14:36.386083671Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -115,7 +129,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 2.4.1
-    created: "2026-03-06T15:59:46.607426476Z"
+    created: "2026-03-16T06:14:36.383655831Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -129,7 +143,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 2.3.2
-    created: "2026-03-06T15:59:46.602444377Z"
+    created: "2026-03-16T06:14:36.378677611Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -143,7 +157,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 2.2.1
-    created: "2026-03-06T15:59:46.59827999Z"
+    created: "2026-03-16T06:14:36.374874933Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -157,7 +171,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 2.1.3
-    created: "2026-03-06T15:59:46.594290865Z"
+    created: "2026-03-16T06:14:36.371922084Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -171,7 +185,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 2.1.2
-    created: "2026-03-06T15:59:46.591742777Z"
+    created: "2026-03-16T06:14:36.368746216Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -183,4 +197,4 @@ entries:
     urls:
     - https://wreiner.github.io/paperless-ngx-helm/paperless-ngx-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-06T15:59:46.588603284Z"
+generated: "2026-03-16T06:14:36.364922008Z"

@@ -2,9 +2,9 @@ apiVersion: v2
 name: paperless-ngx
 description: A Helm chart to install paperless-ngx
 type: application
-version: 0.8.3
-appVersion: "2.20.11"
+version: 0.8.4
+appVersion: "2.20.13"
 dependencies:
   - name: redis
-    version: "25.3.2"
+    version: "25.3.7"
     repository: "https://charts.bitnami.com/bitnami"
